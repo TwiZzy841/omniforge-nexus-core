@@ -13,6 +13,11 @@ import DevelopmentDatabases from "./pages/development/DevelopmentDatabases";
 import DevelopmentAPI from "./pages/development/DevelopmentAPI";
 import DevelopmentCollab from "./pages/development/DevelopmentCollab";
 import DevelopmentStudio from "./pages/development/DevelopmentStudio";
+import CreationStudio from "./pages/creation/CreationStudio";
+import CommerceStudio from "./pages/commerce/CommerceStudio";
+import CollaborationStudio from "./pages/collaboration/CollaborationStudio";
+import AccessibilityStudio from "./pages/accessibility/AccessibilityStudio";
+import AdministrationStudio from "./pages/administration/AdministrationStudio";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +36,11 @@ const App = () => (
           <Route path="/modules/development/databases" element={<DevelopmentDatabases />} />
           <Route path="/modules/development/api" element={<DevelopmentAPI />} />
           <Route path="/modules/development/collab" element={<DevelopmentCollab />} />
+          <Route path="/modules/creation" element={<CreationStudio />} />
+          <Route path="/modules/commerce" element={<CommerceStudio />} />
+          <Route path="/modules/collaboration" element={<CollaborationStudio />} />
+          <Route path="/modules/accessibility" element={<AccessibilityStudio />} />
+          <Route path="/modules/administration" element={<AdministrationStudio />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
