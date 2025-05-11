@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { LogIn } from 'lucide-react';
+import { LogIn, Settings, Search } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const OmniHeader = () => {
@@ -28,9 +28,25 @@ const OmniHeader = () => {
           <Link to="/modules/collaboration" className="text-sm font-medium text-foreground/70 hover:text-omni-primary transition-colors">
             Collaboration
           </Link>
+          {/* Nouvelle option #1 */}
+          <Link to="/modules/accessibility" className="text-sm font-medium text-foreground/70 hover:text-omni-primary transition-colors">
+            Accessibilité
+          </Link>
+          {/* Nouvelle option #2 */}
+          <Link to="/modules/administration" className="text-sm font-medium text-foreground/70 hover:text-omni-primary transition-colors">
+            Administration
+          </Link>
         </nav>
 
         <div className="flex items-center space-x-4">
+          {/* Bouton de recherche */}
+          <Button variant="ghost" size="icon" className="hidden md:flex">
+            <Search className="h-4 w-4" />
+          </Button>
+          {/* Bouton de paramètres */}
+          <Button variant="ghost" size="icon" className="hidden md:flex">
+            <Settings className="h-4 w-4" />
+          </Button>
           <Button variant="outline" className="hidden md:flex items-center space-x-2">
             <LogIn className="h-4 w-4" />
             <span>Connexion</span>
@@ -67,6 +83,22 @@ const OmniHeader = () => {
             <Link to="/modules/collaboration" className="text-sm font-medium text-foreground/70 hover:text-omni-primary transition-colors py-2">
               Collaboration
             </Link>
+            {/* Nouvelles options dans le menu mobile */}
+            <Link to="/modules/accessibility" className="text-sm font-medium text-foreground/70 hover:text-omni-primary transition-colors py-2">
+              Accessibilité
+            </Link>
+            <Link to="/modules/administration" className="text-sm font-medium text-foreground/70 hover:text-omni-primary transition-colors py-2">
+              Administration
+            </Link>
+            {/* Boutons supplémentaires pour mobile */}
+            <div className="flex items-center space-x-4 py-2">
+              <Button variant="ghost" size="icon">
+                <Search className="h-4 w-4" />
+              </Button>
+              <Button variant="ghost" size="icon">
+                <Settings className="h-4 w-4" />
+              </Button>
+            </div>
             <Button variant="outline" className="flex items-center space-x-2 w-full justify-center">
               <LogIn className="h-4 w-4" />
               <span>Connexion</span>
